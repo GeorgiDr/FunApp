@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{0E667293-1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SandBox", "Tests\SandBox\SandBox.csproj", "{485B5C40-6A7B-4EAC-BA45-4062CFBA4196}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunApp.Data.Common", "Data\FunApp.Data.Common\FunApp.Data.Common.csproj", "{847EF35E-9558-4FB2-9D7B-E89D46EEF383}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{485B5C40-6A7B-4EAC-BA45-4062CFBA4196}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{485B5C40-6A7B-4EAC-BA45-4062CFBA4196}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{485B5C40-6A7B-4EAC-BA45-4062CFBA4196}.Release|Any CPU.Build.0 = Release|Any CPU
+		{847EF35E-9558-4FB2-9D7B-E89D46EEF383}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{847EF35E-9558-4FB2-9D7B-E89D46EEF383}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{847EF35E-9558-4FB2-9D7B-E89D46EEF383}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{847EF35E-9558-4FB2-9D7B-E89D46EEF383}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +54,7 @@ Global
 		{2D5FF267-6608-4042-973F-FA41631B923E} = {09373BFF-0B49-4A2B-812F-34F430E286C1}
 		{58BA31CD-BA90-4118-A1E1-CCCC4067728F} = {09373BFF-0B49-4A2B-812F-34F430E286C1}
 		{485B5C40-6A7B-4EAC-BA45-4062CFBA4196} = {0E667293-1BBD-4FD0-96DA-7B9DFB5B46EC}
+		{847EF35E-9558-4FB2-9D7B-E89D46EEF383} = {09373BFF-0B49-4A2B-812F-34F430E286C1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E6D4B616-46E6-4E17-8C0E-8CA4C5390C62}

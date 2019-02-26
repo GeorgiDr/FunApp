@@ -6,6 +6,7 @@ using FunApp.Data.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
 
 namespace FunApp.Web.Models
 {
@@ -15,6 +16,12 @@ namespace FunApp.Web.Models
             : base(options)
         {
         }
+
+        // My Table Add
+
+        public DbSet<Category> Category { get; set; }
+
+        public DbSet<Joke> Joke { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
