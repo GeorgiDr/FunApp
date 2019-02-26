@@ -2,13 +2,18 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <UserSecretsId>aspnet-FunApp.Web-4B4252F5-3A1F-48F8-930C-A6B88F3A5482</UserSecretsId>
+    <UserSecretsId>aspnet-FunApp.Web-3A9A9C7F-F9B5-41C5-B985-8EF232D58B78</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.7" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Data\FunApp.Data.Models\FunApp.Data.Models.csproj" />
+    <ProjectReference Include="..\..\Data\FunApp.Data\FunApp.Data.csproj" />
   </ItemGroup>
 
 </Project>

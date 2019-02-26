@@ -34,16 +34,15 @@ namespace FunApp.Web
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
+            
+                services.AddDbContext<FunAppContext>(options =>
+                    options.UseSqlServer(
+                        this.Configuration.GetConnectionString("DefaultConnection")));
 
-            // Add my configuration
-            services.AddDbContext<FunAppContext>(options =>
-                options.UseSqlServer(
-                    this.Configuration.GetConnectionString("DefaultConnection")));
+                services.AddDefaultIdentity<FunAppUser>()
+                    .AddEntityFrameworkStores<FunAppContext>();
 
-            services.AddDefaultIdentity<FunAppUser>()
-                .AddEntityFrameworkStores<FunAppContext>();
-
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+                services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
