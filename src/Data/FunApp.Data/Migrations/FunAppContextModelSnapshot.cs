@@ -29,7 +29,7 @@ namespace FunApp.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Category");
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("FunApp.Data.Models.FunAppUser", b =>
@@ -97,7 +97,7 @@ namespace FunApp.Data.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("Joke");
+                    b.ToTable("Jokes");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

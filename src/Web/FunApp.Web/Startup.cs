@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FunApp.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Hosting;
@@ -13,6 +14,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using FunApp.Web.Models;
 using FunApp.Data.Models;
+using FunApp.Data.Common;
 
 namespace FunApp.Web
 {
@@ -51,6 +53,10 @@ namespace FunApp.Web
                     .AddEntityFrameworkStores<FunAppContext>();
 
                 services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+                // Application Services
+
+                services.AddScoped(typeof(IRepository<>), typeof(DbRepository<>));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

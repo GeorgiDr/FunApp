@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FunApp.Data.Migrations
 {
     [DbContext(typeof(FunAppContext))]
-    [Migration("20190226212321_JokesAndCategoryAdded")]
-    partial class JokesAndCategoryAdded
+    [Migration("20190227121014_JokesAndCategoryAdd")]
+    partial class JokesAndCategoryAdd
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -31,7 +31,7 @@ namespace FunApp.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Category");
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("FunApp.Data.Models.FunAppUser", b =>
@@ -99,7 +99,7 @@ namespace FunApp.Data.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("Joke");
+                    b.ToTable("Jokes");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

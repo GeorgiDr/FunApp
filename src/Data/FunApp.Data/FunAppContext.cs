@@ -19,9 +19,9 @@ namespace FunApp.Web.Models
 
         // My Table Add
 
-        public DbSet<Category> Category { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
-        public DbSet<Joke> Joke { get; set; }
+        public DbSet<Joke> Jokes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
