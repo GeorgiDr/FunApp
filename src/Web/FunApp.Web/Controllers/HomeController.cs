@@ -9,10 +9,11 @@ using FunApp.Data.Common;
 using FunApp.Data.Models;
 using FunApp.Services.DataServices;
 using FunApp.Services.Models.Home;
+using FunApp.Services.Models;
 
 namespace FunApp.Web.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         
         private readonly IJokeService jokeService;
@@ -24,7 +25,7 @@ namespace FunApp.Web.Controllers
 
         public IActionResult Index()
         {
-            var jokes = this.jokeService.GetRandomJokes(20);
+            var jokes = this.jokeService.GetRandomJokes(10);
             var viewModel = new IndexViewModel
             {
                 Jokes = jokes,

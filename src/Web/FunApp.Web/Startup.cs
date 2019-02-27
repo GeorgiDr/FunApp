@@ -59,6 +59,7 @@ namespace FunApp.Web
 
                 services.AddScoped(typeof(IRepository<>), typeof(DbRepository<>));
                 services.AddScoped<IJokeService, JokeService>();
+                services.AddScoped<ICategoriesService, CategoriesService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

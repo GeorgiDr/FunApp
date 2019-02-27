@@ -1,6 +1,6 @@
 using System;
 
-namespace FunApp.Web.Models
+namespace FunApp.Services.Models
 {
     public class ErrorViewModel
     {

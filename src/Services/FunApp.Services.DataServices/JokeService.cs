@@ -4,16 +4,21 @@ using System.Linq;
 using System.Collections.Generic;
 using FunApp.Data.Common;
 using FunApp.Services.Models.Home;
+using System.Threading.Tasks;
 
 namespace FunApp.Services.DataServices
 {
     public class JokeService : IJokeService
     {
         private readonly IRepository<Joke> jokesRepository;
+        private readonly IRepository<Category> categoriesRepository;
 
-        public JokeService(IRepository<Joke> jokesRepository)
+        public JokeService(
+            IRepository<Joke> jokesRepository,
+            IRepository<Category> categoriesRepository)
         {
             this.jokesRepository = jokesRepository;
+            this.categoriesRepository = categoriesRepository;
         }
 
         public IEnumerable<IndexJokeViewModel> GetRandomJokes(int count)
@@ -34,6 +39,19 @@ namespace FunApp.Services.DataServices
         public int GetCount()
         {
             return this.jokesRepository.All().Count();
+        }
+
+        public async Task<int> Create(int categoryId, string content)
+        {
+           var joke = new Joke
+           {
+               CategoryId = categoryId,
+               Content = content,
+           };
+           await this.jokesRepository.AddAsync(joke);
+           await this.jokesRepository.SaveChangeAsync();
+
+           return joke.Id;
         }
     }
 }
