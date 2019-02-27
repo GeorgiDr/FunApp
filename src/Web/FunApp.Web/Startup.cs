@@ -15,6 +15,7 @@ using Microsoft.Extensions.DependencyInjection;
 using FunApp.Web.Models;
 using FunApp.Data.Models;
 using FunApp.Data.Common;
+using FunApp.Services.DataServices;
 
 namespace FunApp.Web
 {
@@ -57,6 +58,7 @@ namespace FunApp.Web
                 // Application Services
 
                 services.AddScoped(typeof(IRepository<>), typeof(DbRepository<>));
+                services.AddScoped<IJokeService, JokeService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

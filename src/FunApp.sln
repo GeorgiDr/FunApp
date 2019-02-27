@@ -5,19 +5,25 @@ VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{DB514935-D08B-43CC-957A-22D298EF05BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunApp.Web", "Web\FunApp.Web\FunApp.Web.csproj", "{AABCC2EC-710C-40B9-A2B6-2494F4FA8DA9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunApp.Web", "Web\FunApp.Web\FunApp.Web.csproj", "{AABCC2EC-710C-40B9-A2B6-2494F4FA8DA9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{09373BFF-0B49-4A2B-812F-34F430E286C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunApp.Data", "Data\FunApp.Data\FunApp.Data.csproj", "{2D5FF267-6608-4042-973F-FA41631B923E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunApp.Data", "Data\FunApp.Data\FunApp.Data.csproj", "{2D5FF267-6608-4042-973F-FA41631B923E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunApp.Data.Models", "Data\FunApp.Data.Models\FunApp.Data.Models.csproj", "{58BA31CD-BA90-4118-A1E1-CCCC4067728F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunApp.Data.Models", "Data\FunApp.Data.Models\FunApp.Data.Models.csproj", "{58BA31CD-BA90-4118-A1E1-CCCC4067728F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{0E667293-1BBD-4FD0-96DA-7B9DFB5B46EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SandBox", "Tests\SandBox\SandBox.csproj", "{485B5C40-6A7B-4EAC-BA45-4062CFBA4196}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SandBox", "Tests\SandBox\SandBox.csproj", "{485B5C40-6A7B-4EAC-BA45-4062CFBA4196}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunApp.Data.Common", "Data\FunApp.Data.Common\FunApp.Data.Common.csproj", "{847EF35E-9558-4FB2-9D7B-E89D46EEF383}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunApp.Data.Common", "Data\FunApp.Data.Common\FunApp.Data.Common.csproj", "{847EF35E-9558-4FB2-9D7B-E89D46EEF383}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{DE6101DA-E178-46C4-9188-CF952D034AEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunApp.Services.DataServices", "Services\FunApp.Services.DataServices\FunApp.Services.DataServices.csproj", "{C357883B-5A3A-42F7-8159-367988E04610}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunApp.Services.Models", "Services\FunApp.Services.Models\FunApp.Services.Models.csproj", "{6E69E6BF-52B2-48F5-9854-6DF0E9CADC96}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +51,14 @@ Global
 		{847EF35E-9558-4FB2-9D7B-E89D46EEF383}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{847EF35E-9558-4FB2-9D7B-E89D46EEF383}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{847EF35E-9558-4FB2-9D7B-E89D46EEF383}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C357883B-5A3A-42F7-8159-367988E04610}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C357883B-5A3A-42F7-8159-367988E04610}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C357883B-5A3A-42F7-8159-367988E04610}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C357883B-5A3A-42F7-8159-367988E04610}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E69E6BF-52B2-48F5-9854-6DF0E9CADC96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E69E6BF-52B2-48F5-9854-6DF0E9CADC96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E69E6BF-52B2-48F5-9854-6DF0E9CADC96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E69E6BF-52B2-48F5-9854-6DF0E9CADC96}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +69,8 @@ Global
 		{58BA31CD-BA90-4118-A1E1-CCCC4067728F} = {09373BFF-0B49-4A2B-812F-34F430E286C1}
 		{485B5C40-6A7B-4EAC-BA45-4062CFBA4196} = {0E667293-1BBD-4FD0-96DA-7B9DFB5B46EC}
 		{847EF35E-9558-4FB2-9D7B-E89D46EEF383} = {09373BFF-0B49-4A2B-812F-34F430E286C1}
+		{C357883B-5A3A-42F7-8159-367988E04610} = {DE6101DA-E178-46C4-9188-CF952D034AEC}
+		{6E69E6BF-52B2-48F5-9854-6DF0E9CADC96} = {DE6101DA-E178-46C4-9188-CF952D034AEC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E6D4B616-46E6-4E17-8C0E-8CA4C5390C62}
