@@ -11,7 +11,14 @@
              <div class="panel-body">
                  @joke.Content
              </div>
-             <div class="panel-footer">@joke.CategoryName</div>
+             <div class="panel-footer">
+                 @joke.CategoryName
+                 @*@if (this.User.Identity.IsAuthenticated)
+                 {
+                     <a class="btn btn-default btn-sm" asp-controller="Jokes" asp-action="Details" asp-route-id="@joke.Id">View</a>
+                 }*@
+                 <a class="btn btn-default btn-sm" asp-controller="Jokes" asp-action="Details" asp-route-id="@joke.Id">View</a>
+</div>
          </div>
         </div>
     }

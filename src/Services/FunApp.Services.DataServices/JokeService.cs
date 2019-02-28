@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using FunApp.Data.Common;
 using FunApp.Services.Models.Home;
 using System.Threading.Tasks;
+using FunApp.Web.Model.Jokes;
 
 namespace FunApp.Services.DataServices
 {
@@ -29,6 +30,7 @@ namespace FunApp.Services.DataServices
                 .OrderBy(x => Guid.NewGuid())
                 .Select(x => new IndexJokeViewModel
                 {
+                    Id = x.Id,
                     Content = x.Content,
                     CategoryName = x.Category.Name,
                 }).Take(count).ToList();
@@ -52,6 +54,17 @@ namespace FunApp.Services.DataServices
            await this.jokesRepository.SaveChangeAsync();
 
            return joke.Id;
+        }
+
+        public JokeDetailsViewModel GetJokeById(int id)
+        {
+         var joke = this.jokesRepository.All().Where(x => x.Id == id).Select(x => new JokeDetailsViewModel
+         {
+                Content = x.Content,
+                CategoryName = x.Category.Name,
+            }).FirstOrDefault();
+
+         return joke;
         }
     }
 }
