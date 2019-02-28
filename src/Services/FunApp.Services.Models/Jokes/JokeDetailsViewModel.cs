@@ -1,6 +1,9 @@
-﻿namespace FunApp.Web.Model.Jokes
+﻿using FunApp.Data.Models;
+using FunApp.Services.Mapping;
+
+namespace FunApp.Web.Model.Jokes
 {
-    public class JokeDetailsViewModel
+    public class JokeDetailsViewModel : IMapFrom<Joke>
     {
         public string Content { get; set; }
 
