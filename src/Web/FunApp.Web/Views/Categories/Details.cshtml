@@ -1,4 +1,6 @@
-﻿@model List<FunApp.Services.Models.Jokes.JokeSimpleViewModel>
+﻿@using X.PagedList
+@using X.PagedList.Mvc.Core
+@model IPagedList<FunApp.Services.Models.Jokes.JokeSimpleViewModel>
 @{
 }
 
@@ -19,3 +21,5 @@
         }
     </div>
 </div>
+
+@Html.PagedListPager(Model,page => Url.Action("Details", "Categories", new {page}))

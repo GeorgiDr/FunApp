@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using FunApp.Services.DataServices;
 using Microsoft.AspNetCore.Mvc;
+using X.PagedList;
 
 namespace FunApp.Web.Controllers
 {
@@ -27,11 +28,15 @@ namespace FunApp.Web.Controllers
             return this.View(categories);
         }
 
-        public IActionResult Details(int id)
+        public IActionResult Details(int id, int? page)
         {
             var jokesInCategory = this.jokeService.GetAllByCategory(id).ToList();
 
-            return this.View(jokesInCategory);
+            var nextPage = page ?? 1;
+
+            var pagedJokes = jokesInCategory.ToPagedList(nextPage, 4);
+
+            return this.View(pagedJokes);
         }
     }
 }
