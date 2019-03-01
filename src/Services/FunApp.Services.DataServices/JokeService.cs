@@ -7,6 +7,7 @@ using FunApp.Services.Models.Home;
 using System.Threading.Tasks;
 using FunApp.Web.Model.Jokes;
 using FunApp.Services.Mapping;
+using FunApp.Services.Models.Jokes;
 
 namespace FunApp.Services.DataServices
 {
@@ -59,6 +60,14 @@ namespace FunApp.Services.DataServices
              .To<TViewModel>().FirstOrDefault();
 
          return joke;
+        }
+
+        public IEnumerable<JokeSimpleViewModel> GetAllByCategory(int categoryId)
+        {
+           return this.jokesRepository
+                        .All()
+                        .Where(j => j.CategoryId == categoryId)
+                        .To<JokeSimpleViewModel>();
         }
     }
 }

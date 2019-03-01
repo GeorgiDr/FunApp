@@ -2,6 +2,7 @@
 using FunApp.Web.Model.Jokes;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using FunApp.Services.Models.Jokes;
 
 namespace FunApp.Services.DataServices
 {
@@ -14,5 +15,7 @@ namespace FunApp.Services.DataServices
         Task<int> Create(int categoryId, string content);
 
         TViewModel GetJokeById<TViewModel>(int id);
+
+        IEnumerable<JokeSimpleViewModel> GetAllByCategory(int categoryId);
     }
 }

@@ -11,10 +11,14 @@ namespace FunApp.Web.Controllers
     public class CategoriesController : BaseController
     {
         private readonly ICategoriesService categoriesService;
+        private readonly IJokeService jokeService;
 
-        public CategoriesController(ICategoriesService categoriesService)
+        public CategoriesController(
+            ICategoriesService categoriesService,
+            IJokeService jokeService)
         {
             this.categoriesService = categoriesService;
+            this.jokeService = jokeService;
         }
         public IActionResult Index()
         {
@@ -25,7 +29,9 @@ namespace FunApp.Web.Controllers
 
         public IActionResult Details(int id)
         {
-            throw new ArgumentException();
+            var jokesInCategory = this.jokeService.GetAllByCategory(id).ToList();
+
+            return this.View(jokesInCategory);
         }
     }
 }
