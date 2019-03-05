@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using FunApp.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
@@ -65,7 +66,7 @@ namespace FunApp.Web
                 services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
                 // Application Services
-
+                services.AddAutoMapper();
                 services.AddScoped(typeof(IRepository<>), typeof(DbRepository<>));
                 services.AddScoped<IJokeService, JokeService>();
                 services.AddScoped<ICategoriesService, CategoriesService>();
@@ -93,6 +94,10 @@ namespace FunApp.Web
 
             app.UseMvc(routes =>
             {
+                routes.MapRoute(
+                    name: "areas",
+                    template: "{area:exists}/{controller=Categories}/{action=Index}/{id?}");
+
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
